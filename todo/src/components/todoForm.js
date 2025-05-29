@@ -41,7 +41,7 @@ const TodoWrapper = () => {
   return (
     <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} gap-6 p-6`}>
       {/* Todo List */}
-      <div className="bg-white/80 w-full md:w-[580px] h-[700px] p-6 rounded-lg shadow-xl text-[#2E2A40] flex flex-col">
+      <div className="bg-white/80 w-full md:w-[580px] h-[700px] p-6 m-5 rounded-lg shadow-xl text-[#2E2A40] flex flex-col">
         <h2 className="text-2xl font-bold mb-4 text-left">Todo List</h2>
 
         <div className="flex gap-2 mb-4">
