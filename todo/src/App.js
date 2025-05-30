@@ -9,7 +9,7 @@ function App() {
   useEffect(() => {
     const timer = setTimeout(() => {
       setShowIntro(false);
-    }, 3000); // 3 seconds
+    }, 4000); // 4 seconds
 
     return () => clearTimeout(timer);
   }, []);

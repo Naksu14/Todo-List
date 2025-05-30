@@ -8,7 +8,7 @@ const TodoWrapper = () => {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth < 768);
+      setIsMobile(window.innerWidth < 940);
     };
 
     handleResize(); // initial check
@@ -69,46 +69,48 @@ const TodoWrapper = () => {
         </div>
 
         <ul className="space-y-2 overflow-y-auto flex-grow pr-2 custom-scrollbar">
-          {tasks.map((task, index) => (
-            <li
-              key={index}
-              onClick={() => setSelectedTask(task)}
-              className={`flex items-start justify-between p-3 rounded overflow-hidden cursor-pointer ${
-                task.completed
-                  ? 'bg-[#2C2352]/30 text-[#2E2A40]/40'
-                  : 'bg-[#9685E3]/30'
-              }`}
-            >
-              <div className="flex flex-col gap-1 w-full min-w-0">
-                <div className="flex items-center gap-2 min-w-0 w-full">
-                  <input
-                    type="checkbox"
-                    checked={task.completed}
-                    onChange={(e) => {
-                      e.stopPropagation();
-                      toggleTask(index);
-                    }}
-                    className="w-5 h-5 border border-[#9685E3] accent-[#9685E3] rounded shrink-0"
-                  />
-                  <span className="font-bold flex-grow min-w-0 overflow-hidden text-ellipsis whitespace-nowrap">
-                    {task.text.charAt(0).toUpperCase() + task.text.slice(1)}
-                  </span>
-                  <button
-                    onClick={(e) => {
-                      e.stopPropagation();
-                      deleteTask(index);
-                    }}
-                    aria-label="Delete task"
-                    className="text-[#2E2A40]/30 hover:text-[#2E2A40] text-lg font-bold transition duration-200 ml-4 flex-shrink-0"
-                  >
-                    🗑️
-                  </button>
+            {tasks.map((task, index) => (
+              <li
+                key={index}
+                onClick={() => setSelectedTask(task)}
+                className={`flex items-start justify-between p-3 rounded overflow-hidden cursor-pointer transform transition-all duration-300 ease-in-out hover:scale-[1.00] hover:shadow-md
+                  ${
+                    task.completed
+                      ? 'bg-[#2C2352]/30 text-[#2E2A40]/40'
+                      : 'bg-[#9685E3]/30'
+                  }`}
+              >
+                <div className="flex flex-col gap-1 w-full min-w-0">
+                  <div className="flex items-center gap-2 min-w-0 w-full">
+                    <input
+                      type="checkbox"
+                      checked={task.completed}
+                      onChange={(e) => {
+                        e.stopPropagation();
+                        toggleTask(index);
+                      }}
+                      className="w-5 h-5 border border-[#9685E3] accent-[#9685E3] rounded shrink-0"
+                    />
+                    <span className="font-bold flex-grow min-w-0 overflow-hidden text-ellipsis whitespace-nowrap w-[200px] sm:w-[300px] md:w-full">
+                      {task.text.charAt(0).toUpperCase() + task.text.slice(1)}
+                    </span>
+                    <button
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        deleteTask(index);
+                      }}
+                      aria-label="Delete task"
+                      className="text-[#2E2A40]/50 hover:text-[#2E2A40] text-lg font-bold transition duration-200 ml-4 flex-shrink-0"
+                    >
+                      🗑️
+                    </button>
+                  </div>
+                  <span className="text-xs text-[#2E2A40]/60 pl-7">{task.timestamp}</span>
                 </div>
-                <span className="text-xs text-[#2E2A40]/60 pl-7">{task.timestamp}</span>
-              </div>
-            </li>
-          ))}
-        </ul>
+              </li>
+            ))}
+          </ul>
+
 
         <div className="flex justify-between mt-4 text-sm text-gray-400">
           <span>
@@ -120,7 +122,7 @@ const TodoWrapper = () => {
 
       {/* Task Detail Panel */}
       {(!isMobile || selectedTask) && (
-        <div className="relative bg-white/80 w-full md:w-[300px] h-[700px] p-6 rounded-lg shadow-xl text-[#2E2A40] overflow-auto custom-scrollbar">
+        <div className="relative bg-white/80 max-w-[580px] lg:w-[300px] max-h-[700px] p-6 rounded-lg shadow-xl text-[#2E2A40] overflow-auto custom-scrollbar">
           {selectedTask ? (
             <>
               {isMobile && (

@@ -17,7 +17,7 @@ const Todo = () => {
       <div className="relative flex items-center justify-center z-10">
         <TodoWrapper />
       </div>
-      <p className="text-sm text-white b-0 m-5">Loel Campaña | BSIT - 3B</p>
+      
 
     </div>
   );
