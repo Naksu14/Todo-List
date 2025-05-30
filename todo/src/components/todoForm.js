@@ -11,7 +11,7 @@ const TodoWrapper = () => {
       setIsMobile(window.innerWidth < 940);
     };
 
-    handleResize(); // initial check
+    handleResize(); 
     window.addEventListener('resize', handleResize);
     return () => window.removeEventListener('resize', handleResize);
   }, []);
@@ -40,7 +40,7 @@ const TodoWrapper = () => {
 
   return (
     <div className={`flex ${isMobile ? 'flex-col' : 'flex-row'} gap-6 p-6`}>
-      {/* Todo List */}
+      {/* Todo List Conetent*/}
       <div className="bg-white/80 w-full md:w-[580px] h-[700px] p-6 rounded-lg shadow-xl text-[#2E2A40] flex flex-col">
         <h2 className="text-2xl font-bold mb-4 text-left">Todo List</h2>
 
@@ -76,7 +76,7 @@ const TodoWrapper = () => {
                 className={`flex items-start justify-between p-3 rounded overflow-hidden cursor-pointer transform transition-all duration-300 ease-in-out hover:scale-[1.00] hover:shadow-md
                   ${
                     task.completed
-                      ? 'bg-[#2C2352]/30 text-[#2E2A40]/40 line-through'
+                      ? 'bg-[#2C2352]/30 text-[#2E2A40]/40'
                       : 'bg-[#9685E3]/30'
                   }`}
               >
@@ -91,9 +91,14 @@ const TodoWrapper = () => {
                       }}
                       className="w-5 h-5 border border-[#9685E3] accent-[#9685E3] rounded shrink-0"
                     />
-                    <span className="font-bold flex-grow min-w-0 overflow-hidden text-ellipsis whitespace-nowrap w-[200px] sm:w-[300px] md:w-full">
+                    <span
+                      className={`font-bold flex-grow min-w-0 overflow-hidden text-ellipsis whitespace-nowrap w-[200px] sm:w-[300px] md:w-full ${
+                        task.completed ? 'line-through text-[#2E2A40]/40' : ''
+                      }`}
+                    >
                       {task.text.charAt(0).toUpperCase() + task.text.slice(1)}
                     </span>
+
                     <button
                       onClick={(e) => {
                         e.stopPropagation();
@@ -120,7 +125,7 @@ const TodoWrapper = () => {
         </div>
       </div>
 
-      {/* Task Detail Panel */}
+      {/* View Task Detail Container */}
       {(!isMobile || selectedTask) && (
         <div className="relative bg-white/80 max-w-[580px] lg:w-[300px] max-h-[700px] p-6 rounded-lg shadow-xl text-[#2E2A40] overflow-auto custom-scrollbar">
           {selectedTask ? (
