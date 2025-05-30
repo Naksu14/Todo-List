@@ -1,10 +1,10 @@
 # React Todo List App
 
-A simple and clean Todo List built with ReactJS. Add tasks, mark them as completed, and optionally delete them. Responsive and user-friendly.
+A Todo List App built with ReactJS and tailwind css. can Add tasks todo, can mark them as completed, and optionally delete them. Responsive and user-friendly UI.
 
 ## Live Demo
 
- [View Live App](https://todo-list-t9bh.vercel.app/)
+ [Click to View Live App](https://todo-list-t9bh.vercel.app/)
 
 ## 📌 Features
 
@@ -19,7 +19,7 @@ A simple and clean Todo List built with ReactJS. Add tasks, mark them as complet
 
 - [React](https://reactjs.org/)
 - [Vercel](https://vercel.com/) for deployment
-- CSS with custom styles / TailwindCSS
+- CSS with custom styles / [TailwindCSS](https://tailwindcss.com/docs/installation/tailwind-cli)
 
 ##  Getting Started
 
