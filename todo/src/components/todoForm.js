@@ -100,7 +100,7 @@ const TodoWrapper = () => {
                         deleteTask(index);
                       }}
                       aria-label="Delete task"
-                      className="text-[#2E2A40]/50 hover:text-[#2E2A40] text-lg font-bold transition duration-200 ml-4 flex-shrink-0"
+                      className="text-[#2E2A40]/90 hover:text-[#2E2A40] text-lg font-bold transition duration-200 ml-4 flex-shrink-0"
                     >
                       🗑️
                     </button>

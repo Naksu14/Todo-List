@@ -20,7 +20,7 @@ const TodoBg = () => {
     </div>
 
     {/* Footer Text at Bottom */}
-    <div className="absolute bottom-5 w-full text-lefft">
+    <div className="absolute bottom-10 w-full text-left">
       <p className="text-sm text-white">Loel Campaña | BSIT - 3B</p>
     </div>
   </div>
