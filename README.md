@@ -28,3 +28,5 @@ A simple and clean Todo List built with ReactJS. Add tasks, mark them as complet
 ```bash
 git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
+npm install
+npm start
