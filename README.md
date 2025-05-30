@@ -30,3 +30,10 @@ git clone https://github.com/your-username/your-repo-name.git
 cd your-repo-name
 npm install
 npm start
+
+
+```
+## Developer
+
+ [LOel Campaña](https://todo-list-t9bh.vercel.app/](https://github.com/Naksu14))
+
