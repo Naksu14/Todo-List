@@ -13,7 +13,7 @@ A simple and clean Todo List built with ReactJS. Add tasks, mark them as complet
 -  Mark tasks as completed (toggle checkbox)
 -  Optional: Delete tasks
 -  Responsive design
-- ☁ Deployed with Vercel
+-  Deployed with Vercel
 
 ## Built With
 
