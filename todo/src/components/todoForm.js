@@ -76,7 +76,7 @@ const TodoWrapper = () => {
                 className={`flex items-start justify-between p-3 rounded overflow-hidden cursor-pointer transform transition-all duration-300 ease-in-out hover:scale-[1.00] hover:shadow-md
                   ${
                     task.completed
-                      ? 'bg-[#2C2352]/30 text-[#2E2A40]/40'
+                      ? 'bg-[#2C2352]/30 text-[#2E2A40]/40 line-through'
                       : 'bg-[#9685E3]/30'
                   }`}
               >
